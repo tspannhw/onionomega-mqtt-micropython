@@ -45,6 +45,7 @@ port=1883
 client1= client.Client("onion")                           #create client object
 client1.connect(broker,port)                                 #establish connection
 ret= client1.publish("omega",json_string)
+client1.disconnect()
 
 status = oledExp.write(json_string)
 print(status)
